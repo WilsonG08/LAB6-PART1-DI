@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark_blue: hsl(223, 47%, 23%);
+    /* Puede faltra un estilo, pilas */
+}
+
+/* Reseteo de valores 
+    Quita los espacios para fotos y parrafos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background-color: var(--Pale-blue);
+}
+
+.card{
+    width: 344px;
+    height: 612px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 68px auto;
+    background-color: var(--Very-pale-blue);
+}
+
+.card__first-section__image{
+    width: 100%;
+}
+
+.card__second-section__product-time{
+    margin:  20px 20px 20px;
+    color: var(--Dark_blue);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.card__second-section__title{
+    margin: 28px 28px 28px 28px;
+    font-size: 19px;
+    color: var(--Desaturated-blue);
+    line-height: 24px;
+    text-align: center;
+}
+
+.card__second-section__price {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 20px 34px 34px 34px;
+    background: #f0f2ff;
+    padding: 10px 16px 16px 10PX; 
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+    }
+
+
+.card__second-section__price__Annual{
+    color: var(--Dark_blue);
+    font-weight: bold;
+    margin: 0px 0px 0px 25px;
+    white-space: nowrap;
+}
+
+.card__second-section__price__priceYear{
+    font-size: 12px;
+    color: var(--Desaturated-blue);
+    margin: 0px 0px 0px 25px;
+}
+
+.card__second-section__price__Change{
+    font-size: 10px;
+    text-decoration: underline;
+    color: var(--Bright-blue);
+    margin-left: 50px;
+}
+
+.card__second-section__buttonP{
+    display: flex;
+    width: 278px;
+    height: 50px;
+    background-color: var(--Bright-blue);
+    border: none;
+    border-radius: 8px;
+    color: var(--Very-pale-blue);
+    font-size: 17px;
+    display: block;
+    margin: 20px 34px 34px 34px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    box-shadow:  0px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card__second-section__buttonC{
+    width: 296px;
+    height: 50px;
+    color: var(--Desaturated-blue);
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    display: block;
+    margin: auto;
+    background-color: var(--Very-pale-blue);
+    font-weight: bold;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.card__second-section__buttonP:hover{
+    cursor: pointer;
+    background-color: #766cf1;
+}
+
+.card__second-section__price__Change:hover{
+    color: #766cf1;
+}
+
+.card__second-section__buttonC:hover{
+    color: black;
+}
+
+
+
+
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+/* Estilos que ya estaban */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+  /* -----------------------------   Desktop   ------------------------------ */
+@media (min-width: 620px) {
+    body{
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .card{
+        width: 510px;
+        height: 720px;
+        margin: 80px auto 75px;
+    }
+
+
+    .card__first-section__image{
+        content: url(./images/illustration-hero.svg);
+        width: 510px;
+        height: 250px;
+    }
+
+    .card__second-section{
+        width: 510px;
+    }
+
+    .price-section{
+        display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .card__second-section__price{
+        margin-top:2rem;
+        width: 400px;
+    }
+
+    .card_section_text{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .card__second-section__product-time{
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .card__second-section__title{
+        width: 350px;
+        margin: 0;
+    }
+
+    .card__second-section__price{
+        font-weight: 100;
+        margin-bottom: 1.5rem;
+    }
+
+    .card__second-section__price__Annual{
+        font-size:1.1rem;
+    }
+    .card__second-section__price__priceYear{
+        font-size:1rem;
+    }
+
+    .card__second-section__price__Change{
+        margin-left: 7.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .Boton_Principal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card__second-section__buttonP{
+        width: 400px;   
+    }
+
+    .card__second-section__buttonC{
+        margin-top: 10px;
+    }
+
+
+
+
+}
